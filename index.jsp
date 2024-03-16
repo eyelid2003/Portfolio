@@ -204,7 +204,7 @@
             <h3>Why Should you hire me?</h3>
 
             </p>
-            <a href="PalakDixit_InternshalaResume.pdf" class="btn btn-outline-success">My CV</a>
+            <a href="FinalResume.pdf" class="btn btn-outline-success">My CV</a>
           </div>
       </div>
     </div>
@@ -238,7 +238,7 @@
               </div>
             </div>
           </div>
-          <a href="PalakDixit_InternshalaResume.pdf"><button class="btn btn-outline-success">Download CV</button></a>
+          <a href="FinalResume.pdf"><button class="btn btn-outline-success">Download CV</button></a>
         </div>
         <div class="col-md-6 fact-item py-5">
           HTML
