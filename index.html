@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palak Dixit</title>
+<link rel="stylesheet" href="output.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    #content {
+      display: none;
+    }
+    .perspective-1000 {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100">
+  <div id="cursor" class="fixed w-10 h-10 bg-violet-500 bg-opacity-50 rounded-full pointer-events-none z-50 blur-sm">
+  </div>
+    <nav
+      class="fixed top-0 left-0 right-0 flex justify-between items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-3 z-50">
+      <a href="#" class="flex gap-2 items-center " id="logo">
+        <img class="object-conver max-w-14 max-h-14 rounded-full hover:scale-125 transition duration-300 ease-in-out"
+          src="./images/Logo.png">
+        <span
+          class="text-3xl font-bold font-display text-white hover:scale-125 transition duration-300 ease-in-out pl-3 hover:-translate-y-1 transition transform ">Portfolio</span>
+      </a>
+      <div id="nav-menu" class="hidden md:flex gap-12">
+        <a href="#home"
+          class="text-xl font-display font-semibold text-white hover:text-violet-700 p-1 rounded-lg hover:bg-white hover:-translate-y-1 transition transform">Home</a>
+        <a href="#education"
+          class="text-xl font-display font-semibold text-white hover:text-violet-700 p-1 rounded-lg hover:bg-white hover:-translate-y-1 transition transform">Education</a>
+        <a href="#skill"
+          class="text-xl font-display font-semibold text-white hover:text-violet-700 p-1 rounded-lg hover:bg-white hover:-translate-y-1 transition transform">Skills</a>
+        <a href="#project"
+          class="text-xl font-display font-semibold text-white hover:text-violet-700 p-1 rounded-lg hover:bg-white hover:-translate-y-1 transition transform">Projects</a>
+        <a href="#contact"
+          class="text-xl font-display font-semibold text-white hover:text-violet-700 p-1 rounded-lg hover:bg-white hover:-translate-y-1 transition transform">Contact</a>
+      </div>
+      <button class="p-2 text-2xl md:hidden" onclick="hangleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+      <div id="nav-dialog"
+        class="hidden fixed z-10 md:hidden bg-gradient-to-r from-blue-500 to-purple-500 text-white inset-0 px-10 py-3">
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" class="flex gap-2 items-center ">
+            <img class="object-conver max-w-14 max-h-14 rounded-full hover:scale-125 transition duration-300 ease-in-out"
+              src="images/Logo.png">
+            <span
+              class="text-3xl font-bold font-display text-white hover:scale-125 transition duration-300 ease-in-out pl-3 hover:-translate-y-1 transition transform ">Portfolio</span>
+          </a>
+          <button class="p-2 text-2xl md:hidden text-white" onclick="hangletoggle()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mt-6 " id="mdNav">
+          <a onclick="option()" href="#home"
+            class="text-xl font-semibold text-white m-3 p-2 block hover:text-violet-700 hover:bg-white rounded-xl hover:-translate-y-1 transition transform">Home</a>
+          <a onclick="option()" href="#education"
+            class="text-xl font-semibold text-white m-3 p-2 block hover:text-violet-700 hover:bg-white rounded-xl hover:-translate-y-1 transition transform">Education</a>
+          <a onclick="option()" href="#skill"
+            class="text-xl font-semibold text-white m-3 p-2 block hover:text-violet-700 hover:bg-white rounded-xl hover:-translate-y-1 transition transform">Skills</a>
+          <a onclick="option()" href="#project"
+            class="text-xl font-semibold text-white m-3 p-2 block hover:text-violet-700 hover:bg-white rounded-xl hover:-translate-y-1 transition transform">Projects</a>
+          <a onclick="option()" href="#contact"
+            class="text-xl font-semibold text-white m-3 p-2 block hover:text-violet-700 hover:bg-white rounded-xl hover:-translate-y-1 transition transform">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <section class="perspective-1000 py-24 px-4" id="home">
+      <div class="max-w-6xl mx-auto overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-2/5 p-6 flex justify-center " id="profile">
+            <img src="./images/formalpic.jpg" alt="Palak Dixit"
+              class="max-w-80 max-h-80 md:max-w-96- md:max-h-96 object-cover rounded-full border-4 border-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform hover:scale-110 transition duration-300 ease-in-out">
+          </div>
+          <div class="w-full md:w-3/5 p-6 text-center md:text-left" id="home-content">
+            <h1 id="port" class="text-4xl md:text-5xl font-extrabold text-violet-700 tracking-tight leading-snug">I'm Palak Dixit</h1>
+            <h2 class="text-xl md:text-3xl font-medium text-violet-500 mt-3 inn">
+              Java Full Stack Developer
+            </h2>
+            <p id="summary-text" class="text-gray-700 mt-6 leading-relaxed text-sm md:text-lg">
+              Motivated Computer Science student at MITS, Gwalior with a Diploma in CS and hands-on Java full-stack
+              experience. Built projects like Result Summary Software and SewaSath. Active on LeetCode & CodeChef (20+
+              contests, 2⭐). Passionate about coding, problem-solving, and innovation.
+            </p>
+            <div
+              class="mt-6 flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4"
+              id="button">
+              <a href="PALAK DIXIT.pdf"
+                class="shadow-lg px-6 py-3 text-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class=" py-20" id="education">
+      <h1 class="p-4 text-center text-4xl font-bold text-violet-700 tracking-tight leading-snug animate-pulse ">Crafting
+        My Educational Story</h1>
+      <div class="max-w-5xl mx-auto w-full grid grid-cols-9">
+        <!-- first -->
+        <div class="col-span-4 w-full h-full ">
+          <div
+            class="w-full h-full flex flex-col md:flex-row items-center bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500 shadow-lg rounded-lg pl-2">
+            <div class="p-2 w-3/4 md:w-1/4 flex justify-center">
+              <img src="images/mits.png"
+                class="object-cover rounded-full transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="w-full md:w-3/4 p-4 text-center md:text-left">
+              <h1 class="text-white text-2xl font-semibold  border-b-2 border-white mb-4">Graduation</h1>
+              <p class="text-gray-200 sm:text-base text-sm leading-relaxed">
+                Pursuing a Bachelor's degree in <b>Computer Science</b> with an impressive <b>8.29 CGPA</b> from
+                <b>MITS, Gwalior</b> (2023-2026), advancing my technical expertise and academic journey.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+          <div class="h-full w-1 bg-indigo-300 "></div>
+          <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">1</div>
+        </div>
+        <div class="col-span-4 w-full h-full "></div>
+
+        <!-- Second -->
+
+        <div class="col-span-4 w-full h-full "></div>
+        <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+          <div class="h-full w-1 bg-indigo-300 "></div>
+          <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">2</div>
+        </div>
+
+        <div class="col-span-4 w-full h-full ">
+          <div
+            class="w-full h-full flex flex-col md:flex-row items-center bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500 shadow-lg rounded-lg pl-2">
+            <div class="p-2 w-3/4 md:w-1/4 flex justify-center">
+              <img src="images/diploma.png"
+                class="object-cover rounded-full transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="w-full md:w-3/4 p-4 text-center md:text-left">
+              <h1 class="text-white text-2xl font-semibold  border-b-2 border-white mb-4">Diploma</h1>
+              <p class="text-gray-200 sm:text-base text-sm leading-relaxed">
+                Earned a Diploma in <b>Computer Science</b> with a remarkable <b>8.66 CGPA</b> from <b>Govt. Polytechnic
+                  College, Nowgong</b> (2020-2023), building a solid technical foundation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third -->
+        <div class="col-span-4 w-full h-full ">
+          <div
+            class="w-full h-full flex flex-col md:flex-row items-center bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500 shadow-lg rounded-lg pl-2">
+            <div class="p-2 w-3/4 md:w-1/4 flex justify-center">
+              <img src="images/ssm.png"
+                class="object-cover rounded-full transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="w-full md:w-3/4 p-4 text-center md:text-left">
+              <h1 class="text-white text-2xl font-semibold  border-b-2 border-white mb-4">Schooling</h1>
+              <p class="text-gray-200 sm:text-base text-sm leading-relaxed">
+                Completed 12<sup>th</sup> in the <b>PCM stream</b> with an excellent <b>8.44 CGPA</b> from <b>SSM
+                  School, Nowgong</b> (2019-2020), establishing a strong academic base.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+          <div class="h-full w-1 bg-indigo-300 "></div>
+          <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">3</div>
+        </div>
+        <div class="col-span-4 w-full h-full "></div>
+
+      </div>
+    </section>
+    <section class=" py-24" id="skill">
+      <h1 class="p-4 text-center text-4xl font-bold text-violet-700 tracking-tight leading-snug animate-pulse">
+        Areas of Expertise
+      </h1>
+      <div
+        class="py-7 max-w-6xl mx-auto overflow-hidden rounded-lg shadow-xl bg-gradient-to-r from-blue-500 to-purple-500">
+        <div class="flex flex-wrap justify-center gap-5 p-5" id="skil">
+          <!-- Front End -->
+          <div
+            class="w-60 p-4 rounded-xl bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-lg hover:shadow-2xl transform hover:scale-110 transition">
+            <h3 class="text-xl font-bold text-violet-700 mb-4">Front End</h3>
+            <div>
+              <div class="mb-2">
+                <span class="font-medium">HTML</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">CSS</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">JavaScript</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">React JS</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Bootstrap</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">TailwindCSS</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">AJAX</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Back End -->
+          <div
+            class="w-60 p-4 rounded-xl bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-lg hover:shadow-2xl transform hover:scale-110 transition">
+            <h3 class="text-xl font-bold text-violet-700 mb-4">Back End</h3>
+            <div>
+              <div class="mb-2">
+                <span class="font-medium">Java</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">JSP</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">JDBC</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">SpringBoot</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Thymeleaf</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div
+            class="w-60 p-4 rounded-xl bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-lg hover:shadow-2xl transform hover:scale-110 transition">
+            <h3 class="text-xl font-bold text-violet-700 mb-4">Database</h3>
+            <div class="mb-2">
+              <span class="font-medium">MySQL</span>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="font-medium">MongoDB</span>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Tools -->
+          <div
+            class="w-60 p-4 rounded-xl bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-lg hover:shadow-2xl transform hover:scale-110 transition">
+            <h3 class="text-xl font-bold text-violet-700 mb-4">Other Tools</h3>
+            <div>
+              <div class="mb-2">
+                <span class="font-medium">Eclipse</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">GitHub</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Xampp</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Git</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Postman</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="font-medium">Figma</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="font-medium">VS Code</span>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-purple-500 h-2.5 rounded-full" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="font-medium">Canva</span>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-purple-500 h-2.5 rounded-full" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class=" py-20" id="project">
+      <h1 class="p-4 text-center text-4xl font-bold text-violet-700 tracking-tight leading-snug animate-pulse">
+        Project Highlights
+      </h1>
+      <div class="flex flex-wrap justify-center p-5 mx-auto overflow-hidden">
+        <div class="group my-3 lg:mx-2 h-80 w-96 [perspective:1000px]">
+          <div
+            class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+            <div
+              class="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+
+              <img class="w-full h-full object-cover blur-sm" src="images/sewasathi.png" alt="SewaSathi Project" />
+
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p class="text-4xl font-bold text-black-500 tracking-wider">SewaSathi</p>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex min-h-full flex-col items-center justify-center">
+                <p class="text-sm leading-relaxed">
+                  <b>Worker Module:</b> Designed features for workers to manage service profiles, update availability,
+                  and track demand using filters.<br><br>
+                  <b>Client Module:</b> Implemented search and filter options to help clients hire workers, manage
+                  service requests, and post bulk hiring needs.
+                </p>
+                <h4 class="text-lg mt-4"><b>Tech Stack: ReactJS, TailwindCSS, Spring Boot, MongoDB</b></h4>
+                <a href="https://github.com/eyelid2003/SewaSathi" target="_blank"
+                  class="mt-4 shadow-lg px-4 py-2 text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group my-3 lg:mx-2 h-80 w-96 [perspective:1000px]">
+          <div
+            class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+            <div
+              class="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+              <img class="w-full h-full object-cover blur-sm" src="images/resultsum.png" alt="Result Summary Project" />
+
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p class="text-4xl font-bold text-black tracking-wider">Result Summary</p>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex min-h-full flex-col items-center justify-center">
+                <p class="text-sm leading-relaxed">
+                  <b>Overall Result Calculation:</b> Automatically computes and displays the aggregate results for all
+                  students.<br><br>
+                  <b>Subject-Specific Summary:</b> Enables users to retrieve and analyze result summaries for specific
+                  subjects.
+                </p>
+                <h4 class="text-lg mt-4"><b>Tech Stack: JAVA, MYSQL</b></h4>
+                <a href="https://github.com/eyelid2003/Result_Summary-Software" target="_blank"
+                  class="mt-4 shadow-lg px-4 py-2 text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group my-3 lg:mx-2 h-80 w-96 [perspective:1000px]">
+          <div
+            class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+            <div
+              class="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+              <img class="w-full h-full object-cover blur-sm" src="images/quiz.jpg" alt="QuizSphere Website Project" />
+
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p class="text-4xl font-bold text-black tracking-wider">QuizSphere</p>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex min-h-full flex-col items-center justify-center">
+                <p class="text-sm leading-relaxed">
+                  <b>Admin Module:</b> Create and manage quiz questions and organize notes for users.<br><br>
+                  <b>User Module:</b> Allows users to take quizzes and create personalized notes for reference.
+                </p>
+                <h4 class="text-lg mt-4"><b>Tech Stack: HTML, CSS, JS, JSP, JDBC, MySQL, AJAX</b></h4>
+                <a href="https://github.com/eyelid2003/Quiz-Website" target="_blank"
+                  class="mt-4 shadow-lg px-4 py-2 text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group my-3 lg:mx-2 h-80 w-96 [perspective:1000px]">
+          <div
+            class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+            <div
+              class="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+              <img class="w-full h-full object-cover blur-sm" src="images/monetory.png"
+                alt="Monetary Tracking System Project" />
+
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p class="text-4xl font-bold text-black tracking-wider text-center">Monetary Tracker</p>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex min-h-full flex-col items-center justify-center">
+                <p class="text-sm leading-relaxed">
+                  <b>Dashboard Module:</b> Displays total expenses, income, and savings with visual breakdowns for
+                  better financial insights.<br><br>
+                  <b>User Module:</b> Allows users to track, categorize, and manage their spending effectively.
+                </p>
+                <h4 class="text-lg mt-4"><b>Tech Stack: HTML, CSS, JS, JSP, JDBC, MySQL, AJAX</b></h4>
+                <a href="https://github.com/eyelid2003/Monetery-Tracker-" target="_blank"
+                  class="mt-4 shadow-lg px-4 py-2 text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group my-3 lg:mx-2 h-80 w-96 [perspective:1000px]">
+          <div
+            class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+            <div
+              class="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+              <img class="w-full h-full object-cover blur-sm" src="images/book.png" alt="E-Book Management Project" />
+
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p class="text-4xl font-bold text-black tracking-wider text-center">E-Book Management</p>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex min-h-full flex-col items-center justify-center">
+                <p class="text-sm leading-relaxed">
+                  <b>Purchase Module:</b> Allows users to browse and buy new and pre-owned books.<br><br>
+                  <b>Selling Module:</b> Empowers users to list and sell their books, promoting a book-sharing
+                  community.
+                </p>
+                <h4 class="text-lg mt-4"><b>Tech Stack: HTML, CSS, JS, JSP, JDBC, MySQL, AJAX</b></h4>
+                <a href="https://github.com/eyelid2003/E-Book-Management" target="_blank"
+                  class="mt-4 shadow-lg px-4 py-2 text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="contact" class=" py-20">
+      <h1 id="contact-title"
+        class="p-4 text-center text-4xl font-bold text-violet-700 tracking-tight leading-snug animate-pulse">
+        Get in Touch
+      </h1>
+      <div id="contact-content"
+        class="w-full mx-auto px-3 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div id="contact-details"
+          class="p-8 lg:w-2/5 rounded-lg bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-md border-1">
+          <h2 class="text-2xl lg:text-3xl font-semibold text-center text-gray-800 mb-6">Contact Details</h2>
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="text-violet-700 lg:text-3xl text-2xl">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3 class="text-lg lg:text-xl font-medium text-gray-700">Phone</h3>
+                <p class="text-gray-600">+91 76920 *****</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="text-violet-700 lg:text-3xl text-2xl">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3 class="text-lg lg:text-xl font-medium text-gray-700">Email</h3>
+                <a href="mailto:d.eyelid2003@gmail.com"
+                  class="text-gray-600 hover:text-violet-700">d.eyelid2003@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-lg font-medium text-gray-700 mb-4 text-center">Reach Out & Stay Connected</h3>
+            <div class="flex space-x-6 items-center justify-center">
+              <a href="https://github.com/eyelid2003" target="_blank"
+                class="text-violet-700 hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                <i class="fab fa-github text-3xl"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/palak-dixit-3bb91b24b/" target="_blank"
+                class="text-violet-700 hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                <i class="fab fa-linkedin text-3xl"></i>
+              </a>
+              <a href="https://leetcode.com/u/d_eyelid/" target="_blank"
+                class="text-violet-900 hover:-translate-y-1 transition transform duration-300 ease-in-out">
+                <i class="fa-solid fa-code"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div 
+          class="p-8 lg:w-3/5 rounded-lg bg-gradient-to-br from-rose-50 via-white to-pink-100 shadow-md border-1">
+          <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Send Me a Message</h2>
+         <form id="contactForm" class="space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <input type="text" name="user_name" placeholder="Your Name"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-700"
+        required>
+    </div>
+    <div>
+      <input type="email" name="user_email" placeholder="Your Email"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-700"
+        required>
+    </div>
+  </div>
+  <div>
+    <textarea rows="5" name="message" placeholder="Your review for My Project"
+      class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-700"
+      required></textarea>
+  </div>
+  <div>
+    <button type="submit"
+      class="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-xl hover:-translate-y-1 transition transform duration-300 ease-in-out">
+      Send Message
+    </button>
+  </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    <footer class="flex flex-col items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
+      <div class="container text-center">
+        <h3 class="text-xl font-semibold mb-2">Follow me for updates and inspiration!</h3>
+      </div>
+      <div class=" text-sm text-gray-300">
+        &copy; 2025 Palak Dixit. All Rights Reserved.
+      </div>
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+    // This event listener waits for the HTML to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Initialize EmailJS with your CORRECT Public Key from your dashboard
+        emailjs.init("W-TN6BsGNqnKp-JKZ"); 
+
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Stop the form from submitting normally
+
+                // These IDs must match your EmailJS account
+                emailjs.sendForm('service_oa6osha', 'template_lm7cceh', this)
+                    .then(() => {
+                        alert('Message sent successfully!');
+                        this.reset(); // Clear the form fields
+                    }, (error) => {
+                        alert('Failed to send the message. Check the console for details.');
+                        console.error('EmailJS Error:', error);
+                    });
+            });
+        }
+    });
+</script>
+
+
+</body>
+</html>
